@@ -1,8 +1,10 @@
 <template>
   <div class="mainContainer">
     <header class="headerWrapper">
+      <h1 class="glitch headerTitle" data-text="ALIENS AMONG US">
+        ALIENS AMONG US
+      </h1>
       <p class="headerName">RAMEEZ IQBAL - BOLEN</p>
-      <h1 class="headerTitle">ALIENS AMONG US</h1>
     </header>
     <div class="mainBannerContainer">
       <img
@@ -36,6 +38,8 @@
         </p>
       </div>
       <div class="featuredCol">
+        <h3>Collection of 150 Art Pieces</h3>
+        <hr class="lineBottom" />
         <h4>Featured in</h4>
         <ul>
           <li>
@@ -115,8 +119,8 @@
   <footer class="footerContainer">
     <marquee behavior="scroll" direction="left" loop="infinite">
       <h1 class="footerMarqueeText">
-        ALIENS AMONG US ALIENS AMONG US ALIENS AMONG US ALIENS AMONG US ALIENS
-        AMONG US ALIENS AMONG US
+        ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US
+        ALIENS AMONG US ALIENS AMONG US .
       </h1>
     </marquee>
     <div class="mainFooter">
