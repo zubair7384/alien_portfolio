@@ -13,4 +13,12 @@ export default defineNuxtConfig({
     },
   },
   plugins: [],
+  modules: ["nuxt-swiper"],
+  /* swiper: {
+    // Swiper options
+    //----------------------
+    // prefix: 'Swiper',
+    // styleLang: 'css',
+    // modules: ['navigation', 'pagination'], // all modules are imported by default
+  } */
 });
