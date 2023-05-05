@@ -183,6 +183,9 @@ body {
       @media screen and (max-width: $md) {
         gap: 2.5rem;
       }
+      @media screen and (max-width: $sm) {
+        row-gap: 3.2rem;
+      }
       li {
         display: flex;
         justify-content: center;
@@ -190,20 +193,22 @@ body {
         cursor: pointer;
         transition: transform 0.5s;
         flex: 0 0 calc(16.66% - 20px);
-        // margin-bottom: 30px;
         padding: 2px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         &:last-child {
           margin-right: 0;
         }
-
         @media screen and (max-width: $md) {
           flex: 0 0 calc(50% - 20px);
 
           &:nth-child(2n) {
             margin-right: 0;
           }
+        }
+        @media screen and (max-width: $sm) {
+          transform: scale(1.15);
+          column-gap: 3rem;
         }
         &:hover {
           // transform: scale(1.04);
