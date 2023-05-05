@@ -78,6 +78,14 @@ body {
         right: 0;
         top: 40%;
       }
+      @media only screen and (max-width: $md) {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0px 0px 0px 10px #00ff29;
+        filter: blur(60px);
+        left: 15%;
+        top: 10%;
+      }
     }
     .desCol {
       width: 40%;
@@ -184,7 +192,9 @@ body {
         gap: 2.5rem;
       }
       @media screen and (max-width: $sm) {
-        row-gap: 3.2rem;
+        gap: 0.1rem;
+        row-gap: 0.4rem;
+        justify-content: space-between;
       }
       li {
         display: flex;
@@ -201,23 +211,19 @@ body {
         }
         @media screen and (max-width: $md) {
           flex: 0 0 calc(50% - 20px);
-
           &:nth-child(2n) {
             margin-right: 0;
           }
         }
         @media screen and (max-width: $sm) {
-          transform: scale(1.15);
-          column-gap: 3rem;
+          flex: 0 0 49%;
         }
         &:hover {
-          // transform: scale(1.04);
           filter: brightness(0.5);
         }
         img {
           max-width: 100%;
           height: auto;
-          // border: 2px solid #00ff29;
           border-radius: 8px;
         }
       }
@@ -231,7 +237,7 @@ body {
   @media only screen and (max-width: $md) {
     margin-top: 50px;
   }
-  marquee {
+  .nuxtMarquee {
     background-color: #00ff29;
   }
   .footerMarqueeText {

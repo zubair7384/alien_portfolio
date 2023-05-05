@@ -117,12 +117,13 @@
     </div>
   </div>
   <footer class="footerContainer">
-    <marquee behavior="scroll" direction="left" loop="infinite">
-      <h1 class="footerMarqueeText">
-        ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US
-        ALIENS AMONG US ALIENS AMONG US .
-      </h1>
-    </marquee>
+    <!-- <MarqueeText>
+      ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US
+      ALIENS AMONG US ALIENS AMONG US .
+    </MarqueeText> -->
+    <Vue3Marquee class="nuxtMarquee">
+      <h1 class="footerMarqueeText">ALIENS AMONG US . &nbsp;</h1>
+    </Vue3Marquee>
     <div class="mainFooter">
       <p>Copyright© 2023 - RAMEEZ IQBAL -- BOLEN</p>
       <img src="../assets/images/footer-logo.svg" alt="alien-footer-logo" />
@@ -131,6 +132,8 @@
 </template>
 
 <script>
+import "vue3-marquee/dist/style.css";
+
 export default {
   data() {
     return {
