@@ -1,3 +1,3 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  console.log(nuxtApp, "AAPP");
+  console.log(nuxtApp, "app");
 });

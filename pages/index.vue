@@ -55,14 +55,17 @@
           </li>
         </ul>
         <hr class="lineBottom" />
+        <MyModalPreview />
       </div>
     </div>
     <div class="cardsContainer">
       <ul>
         <li>
+          <img class="plus" src="../assets/images/plus.svg" alt="plus-icon" />
           <img src="../assets/images/1.png" alt="alien-1" />
         </li>
         <li>
+          <img class="plus" src="../assets/images/plus.svg" alt="plus-icon" />
           <img src="../assets/images/2.png" alt="alien-2" />
         </li>
         <li>
@@ -117,10 +120,6 @@
     </div>
   </div>
   <footer class="footerContainer">
-    <!-- <MarqueeText>
-      ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US . ALIENS AMONG US
-      ALIENS AMONG US ALIENS AMONG US .
-    </MarqueeText> -->
     <Vue3Marquee class="nuxtMarquee">
       <h1 class="footerMarqueeText">ALIENS AMONG US . &nbsp;</h1>
     </Vue3Marquee>
@@ -132,8 +131,6 @@
 </template>
 
 <script>
-import "vue3-marquee/dist/style.css";
-
 export default {
   data() {
     return {
