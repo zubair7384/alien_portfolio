@@ -3,12 +3,15 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:700");
 
 $xsm: 350px;
 $sm: 500px;
 $md: 768px;
 $lg: 1200px;
 $xlg: 1600px;
+
+$myColor1: #00ff29;
 
 body {
   margin: 0;
@@ -29,21 +32,22 @@ body {
       font-size: clamp(12px, 2vw, 16px);
       color: #bdbdbd;
       z-index: 1;
+      span {
+        letter-spacing: -2px;
+      }
     }
     .headerTitle {
       font-size: clamp(16px, 4vw, 42px);
       font-weight: 600;
-      color: #00ff29;
-      letter-spacing: 6px;
-      word-spacing: 6px;
+      color: $myColor1;
+      letter-spacing: 2px;
+      word-spacing: 2px;
       @media only screen and (max-width: $sm) {
-        letter-spacing: 2px;
-        word-spacing: 1px;
+        letter-spacing: 1px;
+        word-spacing: -2px;
       }
       @media only screen and (max-width: $xsm) {
         font-size: 12px;
-        letter-spacing: 2px;
-        word-spacing: 1px;
       }
     }
     @media only screen and (max-width: $md) {
@@ -63,9 +67,9 @@ body {
       width: 400px;
       height: 400px;
       border-radius: 50%;
-      background-color: #00ff29;
+      background-color: $myColor1;
       position: absolute;
-      box-shadow: 0px 0px 0px 200px #00ff29;
+      box-shadow: 0px 0px 0px 200px $myColor1;
       filter: blur(100px);
       z-index: 0;
       left: 45%;
@@ -73,7 +77,7 @@ body {
       @media only screen and (max-width: $lg) {
         width: 50px;
         height: 50px;
-        box-shadow: 0px 0px 0px 200px #00ff29;
+        box-shadow: 0px 0px 0px 200px $myColor1;
         left: auto;
         right: 0;
         top: 40%;
@@ -81,7 +85,7 @@ body {
       @media only screen and (max-width: $md) {
         width: 280px;
         height: 280px;
-        box-shadow: 0px 0px 0px 30px #00ff29;
+        box-shadow: 0px 0px 0px 30px $myColor1;
         filter: blur(60px);
         left: 15%;
         top: 10%;
@@ -214,6 +218,9 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
             color: #ffffff;
+            @media screen and (max-width: $md) {
+              display: none;
+            }
           }
         }
         &:last-child {
@@ -233,6 +240,9 @@ body {
         }
         &:hover {
           filter: brightness(0.6);
+          @media screen and (max-width: $md) {
+            filter: brightness(1);
+          }
         }
         img {
           max-width: 100%;
@@ -246,17 +256,19 @@ body {
 
 .footerContainer {
   margin-top: 100px;
-  background-color: #000000;
+  background-color: $myColor1;
   @media only screen and (max-width: $md) {
     margin-top: 50px;
   }
   .nuxtMarquee {
-    background-color: #00ff29;
+    background-color: $myColor1;
+    border-bottom: 1px solid #000;
   }
   .footerMarqueeText {
     font-size: 154px;
     font-weight: 600;
     color: #000;
+    margin-left: 35px;
     @media only screen and (max-width: $md) {
       font-size: 80px;
     }
@@ -265,15 +277,18 @@ body {
     width: 90%;
     margin: 0 auto;
     height: 60px;
-    background-color: #000000;
+    background-color: $myColor1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     p {
-      color: #f2f2f2;
+      color: #000;
       font-size: 14px;
       @media only screen and (max-width: $md) {
         font-size: 12px;
+      }
+      span {
+        letter-spacing: -2px;
       }
     }
   }
@@ -414,4 +429,58 @@ skew to change the 'thickness' of the glitch.*/
 .cursor.fx .cursor-fx:after {
   top: 70%;
   left: 0;
+}
+
+// Scroll Icon
+.mainBannerContainer {
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    width: 50px;
+    height: 25px;
+    overflow: hidden;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    margin-top: 0;
+    opacity: 0;
+    @media only screen and (max-width: $md) {
+      display: none;
+    }
+    &::before {
+      content: "";
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -36px;
+      left: 0;
+      border: solid 2px #fff;
+      transform: rotate(45deg);
+    }
+  }
+}
+@keyframes animation {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  5% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    margin-top: 24px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 24px;
+    opacity: 0;
+  }
 }

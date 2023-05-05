@@ -4,13 +4,14 @@
       <h1 class="glitch headerTitle" data-text="ALIENS AMONG US">
         ALIENS AMONG US
       </h1>
-      <p class="headerName">RAMEEZ IQBAL - BOLEN</p>
+      <p class="headerName">RAMEEZ IQBAL <span>--</span> BOLEN</p>
     </header>
     <div class="mainBannerContainer">
       <img
         src="../assets/images/alien-main-banner.png"
         alt="alien-banner-image"
       />
+      <div class="icon"></div>
     </div>
     <div class="descriptionContaoner">
       <div class="greenEllipse"></div>
@@ -61,11 +62,9 @@
     <div class="cardsContainer">
       <ul>
         <li>
-          <img class="plus" src="../assets/images/plus.svg" alt="plus-icon" />
           <img src="../assets/images/1.png" alt="alien-1" />
         </li>
         <li>
-          <img class="plus" src="../assets/images/plus.svg" alt="plus-icon" />
           <img src="../assets/images/2.png" alt="alien-2" />
         </li>
         <li>
@@ -121,11 +120,13 @@
   </div>
   <footer class="footerContainer">
     <Vue3Marquee class="nuxtMarquee">
-      <h1 class="footerMarqueeText">ALIENS AMONG US . &nbsp;</h1>
+      <h1 class="footerMarqueeText">ALIENS AMONG US .</h1>
+
+      <h1 class="footerMarqueeText">ALIENS AMONG US .</h1>
     </Vue3Marquee>
     <div class="mainFooter">
-      <p>Copyright© 2023 - RAMEEZ IQBAL -- BOLEN</p>
-      <img src="../assets/images/footer-logo.svg" alt="alien-footer-logo" />
+      <p>© 2023 rameez iqbal <span>--</span> Bolen</p>
+      <p>Privacy - Cookies</p>
     </div>
   </footer>
 </template>
