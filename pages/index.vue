@@ -10,12 +10,12 @@
     <div class="mainBannerContainer">
       <img
         class="lgImage"
-        src="../assets/images/alien-main-banner.png"
+        src="@/assets/images/alien-main-banner.png"
         alt="alien-banner-image"
       />
       <img
         class="smImage"
-        src="../assets/images/alien-main-banner-mobile.png"
+        src="@/assets/images/alien-main-banner-mobile.png"
         alt="alien-banner-image"
       />
       <div class="icon"></div>
@@ -53,7 +53,7 @@
           <li>
             <a>
               <img
-                src="../assets/images/design-boom-logo.png"
+                src="@/assets/images/design-boom-logo.png"
                 alt="alien-banner-image"
               />
             </a>

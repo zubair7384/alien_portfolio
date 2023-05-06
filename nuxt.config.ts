@@ -3,8 +3,10 @@ import { resolve } from "path";
 
 export default defineNuxtConfig({
   alias: {
-    "@": resolve(__dirname, "/"),
+    // assets: "/<rootDir>/assets",
+    prefix: "/assets/",
   },
+
   css: ["~/assets/main.scss", "vue3-marquee/dist/style.css"],
   postcss: {
     plugins: {
