@@ -1,6 +1,14 @@
 <template>
   <div class="big"></div>
   <div class="mainContainer">
+    <nuxt-head>
+      <title>Aliens Among Us by Rameez - Intergalactic Fashion Campaign</title>
+      <description>
+        Aliens Among Us is an AI generated concept fashion campaign featuring
+        Louis Vuitton's luxury handbag collection by Rameez Iqbal. Featured in
+        designboom.
+      </description>
+    </nuxt-head>
     <header class="headerWrapper">
       <h1 class="glitch headerTitle" data-text="ALIENS AMONG US">
         ALIENS AMONG US
