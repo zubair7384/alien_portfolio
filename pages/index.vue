@@ -1,4 +1,5 @@
 <template>
+  <div class="big"></div>
   <div class="mainContainer">
     <header class="headerWrapper">
       <h1 class="glitch headerTitle" data-text="ALIENS AMONG US">
@@ -134,30 +135,32 @@
 <script>
 export default {
   data() {
-    return {
-      images: [
-        "1.png",
-        "2.png",
-        "3.png",
-        "4.png",
-        "5.png",
-        "6.png",
-        "7.png",
-        "8.png",
-        "9.png",
-        "10.png",
-        "11.png",
-        "12.png",
-        "13.png",
-        "14.png",
-        "15.png",
-        "16.png",
-        "17.png",
-        "18.png",
-      ],
-    };
+    return {};
   },
-  mounted() {},
+  mounted() {
+    const cursorBig = document?.querySelector(".big");
+    const footer = document?.querySelector(".footerContainer");
+    const greenEllipse = document?.querySelector(".greenEllipse");
+    footer?.addEventListener("mouseover", () => {
+      cursorBig.style.backgroundColor = "#fff";
+    });
+    footer?.addEventListener("mouseleave", () => {
+      cursorBig.style.backgroundColor = "#00ff29";
+    });
+    greenEllipse?.addEventListener("mouseover", () => {
+      cursorBig.style.backgroundColor = "#fff";
+    });
+    greenEllipse?.addEventListener("mouseleave", () => {
+      cursorBig.style.backgroundColor = "#00ff29";
+    });
+    const positionElement = (e) => {
+      const mouseY = e.clientY + window.pageYOffset;
+      const mouseX = e.clientX + window.pageXOffset;
+      cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    };
+
+    window?.addEventListener("mousemove", positionElement);
+  },
   methods: {},
 };
 </script>
