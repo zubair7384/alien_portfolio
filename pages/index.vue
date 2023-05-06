@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import Cards from "~/components/cards.vue";
+import Cards from "~/components/Cards.vue";
 
 export default {
   data() {
