@@ -52,8 +52,8 @@ body.modal-open {
     left: 0;
     top: 0;
     background: #00000070;
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(40px);
+    transition: all 0.1s ease-in-out;
     z-index: 3;
   }
 
@@ -68,7 +68,7 @@ body.modal-open {
     align-items: center;
     height: 100vh;
     .imageWrapper {
-      max-width: 500px !important;
+      max-width: 700px !important;
       position: relative;
       display: flex;
       justify-content: center;
@@ -103,6 +103,7 @@ body.modal-open {
         border-radius: 50%;
         color: #fff;
         font-size: 40px;
+        cursor: none;
       }
     }
   }

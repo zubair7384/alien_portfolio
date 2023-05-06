@@ -10,12 +10,12 @@
     <div class="mainBannerContainer">
       <img
         class="lgImage"
-        src="@/assets/images/alien-main-banner.png"
+        src="https://ik.imagekit.io/knip8ym3dh/AliensAmongUs/alien-main-banner.png?tr=w-1714,h-800,fo-auto"
         alt="alien-banner-image"
       />
       <img
         class="smImage"
-        src="@/assets/images/alien-main-banner-mobile.png"
+        src="https://ik.imagekit.io/knip8ym3dh/AliensAmongUs/alien-main-banner-mobile.png??tr=w-441,h-511,fo-auto"
         alt="alien-banner-image"
       />
       <div class="icon"></div>
@@ -51,15 +51,20 @@
         <h4>Featured in</h4>
         <ul>
           <li>
-            <a>
-              <img
-                src="@/assets/images/design-boom-logo.png"
-                alt="alien-banner-image"
-              />
+            <a
+              href="https://www.designboom.com/art/rameez-iqbal-aliens-among-us-intergalactic-handbag-collection-10-17-2022/"
+              target="_blank"
+            >
+              <img src="@/assets/images/db.png" alt="alien-banner-image" />
             </a>
           </li>
           <li>
-            <a class="fahrWrapper"> <span>FAHR</span>EVHENT </a>
+            <a
+              href="https://fahrenheitmagazine.com/en/design/graphic/rameez-iqbal-and-his-avant-garde-artistic-proposal"
+              target="_blank"
+            >
+              <img src="@/assets/images/fh.png" alt="alien-banner-image" />
+            </a>
           </li>
         </ul>
         <hr class="lineBottom" />

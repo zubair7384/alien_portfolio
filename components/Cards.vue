@@ -3,7 +3,9 @@
     <ul>
       <li v-for="(image, index) in imageArray" :key="index">
         <img
-          :src="`/images/${image}AAU.png`"
+          :src="`https://ik.imagekit.io/knip8ym3dh/AliensAmongUs/${
+            index + 1
+          }AAU.png?tr=w-299,h-399,fo-auto`"
           :alt="`alien${index + 1}`"
           @click="openModal(index)"
         />
@@ -28,7 +30,6 @@ export default {
   data() {
     return {
       imageArray: [],
-      images: ["/images/1AAU.png", "/images/2AAU.png"],
       isModalActive: false,
       selectedImageSrc: "",
       selectedImageAlt: "",
@@ -36,7 +37,7 @@ export default {
   },
   mounted() {
     let imageArray = [];
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 150; i++) {
       let imagePath = `${i}`;
       imageArray.push(imagePath);
     }
@@ -44,7 +45,9 @@ export default {
   },
   methods: {
     openModal(index) {
-      this.selectedImageSrc = `/images/${this.imageArray[index]}AAU.png`;
+      this.selectedImageSrc = `https://ik.imagekit.io/knip8ym3dh/AliensAmongUs/${
+        index + 1
+      }AAU.png?tr=w-600,h-830,fo-auto`;
       this.selectedImageAlt = `alien${index + 1}`;
       this.isModalActive = true;
     },
