@@ -9,7 +9,13 @@
     </header>
     <div class="mainBannerContainer">
       <img
+        class="lgImage"
         src="../assets/images/alien-main-banner.png"
+        alt="alien-banner-image"
+      />
+      <img
+        class="smImage"
+        src="../assets/images/alien-main-banner-mobile.png"
         alt="alien-banner-image"
       />
       <div class="icon"></div>
@@ -61,62 +67,7 @@
       </div>
     </div>
     <div class="cardsContainer">
-      <ul>
-        <li>
-          <img src="../assets/images/1.png" alt="alien-1" />
-        </li>
-        <li>
-          <img src="../assets/images/2.png" alt="alien-2" />
-        </li>
-        <li>
-          <img src="../assets/images/3.png" alt="alien-3" />
-        </li>
-        <li>
-          <img src="../assets/images/4.png" alt="alien-4" />
-        </li>
-        <li>
-          <img src="../assets/images/5.png" alt="alien-5" />
-        </li>
-        <li>
-          <img src="../assets/images/6.png" alt="alien-6" />
-        </li>
-        <li>
-          <img src="../assets/images/7.png" alt="alien-7" />
-        </li>
-        <li>
-          <img src="../assets/images/8.png" alt="alien-8" />
-        </li>
-        <li>
-          <img src="../assets/images/9.png" alt="alien-9" />
-        </li>
-        <li>
-          <img src="../assets/images/10.png" alt="alien-10" />
-        </li>
-        <li>
-          <img src="../assets/images/11.png" alt="alien-11" />
-        </li>
-        <li>
-          <img src="../assets/images/12.png" alt="alien-12" />
-        </li>
-        <li>
-          <img src="../assets/images/13.png" alt="alien-13" />
-        </li>
-        <li>
-          <img src="../assets/images/14.png" alt="alien-14" />
-        </li>
-        <li>
-          <img src="../assets/images/15.png" alt="alien-15" />
-        </li>
-        <li>
-          <img src="../assets/images/16.png" alt="alien-16" />
-        </li>
-        <li>
-          <img src="../assets/images/17.png" alt="alien-17" />
-        </li>
-        <li>
-          <img src="../assets/images/18.png" alt="alien-18" />
-        </li>
-      </ul>
+      <Cards />
     </div>
   </div>
   <footer class="footerContainer">
@@ -133,6 +84,8 @@
 </template>
 
 <script>
+import Cards from "~/components/cards.vue";
+
 export default {
   data() {
     return {};
