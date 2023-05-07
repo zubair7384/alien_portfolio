@@ -69,6 +69,8 @@ body.modal-open {
     height: 100vh;
     .imageWrapper {
       max-width: 700px !important;
+      width: 700px;
+      min-height: 820px;
       position: relative;
       display: flex;
       justify-content: center;
@@ -85,6 +87,7 @@ body.modal-open {
       img {
         position: relative;
         width: 100%;
+        height: fit-content;
         z-index: 2;
         top: 0;
         border-radius: 12px;

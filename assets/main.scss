@@ -460,12 +460,14 @@ skew to change the 'thickness' of the glitch.*/
     }
   }
   .lgImage {
+    width: 100%;
     display: block;
     @media only screen and (max-width: $md) {
       display: none;
     }
   }
   .smImage {
+    width: 100%;
     display: none;
     @media only screen and (max-width: $md) {
       display: block;
