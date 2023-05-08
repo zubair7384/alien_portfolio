@@ -114,10 +114,7 @@ export default {
     const positionElement = (e) => {
       const mouseY = e.clientY + +window?.pageYOffset;
       const mouseX = e.clientX + window?.pageXOffset;
-      cursorBig.style.transform = `translate3d(${mouseX - 9}px, ${
-        mouseY - 9
-      }px, 0)`;
-      // console.log(window, "window");
+      cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     };
 
     window?.addEventListener("mousemove", positionElement);
