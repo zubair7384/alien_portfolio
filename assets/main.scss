@@ -510,32 +510,11 @@ skew to change the 'thickness' of the glitch.*/
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-play-state: running;
-  transition: transform 0.06s;
-  // filter: blur(2px);
+  transition: transform 0.1s;
   @media only screen and (max-width: 1024px) {
     display: none;
   }
 }
-
-// @keyframes stretch {
-//   0% {
-//     opacity: 1;
-//     background-color: #fff;
-//     box-shadow: 0px 0px 0px 5px #fff;
-//     border-radius: 100%;
-//   }
-
-//   50% {
-//     background-color: $myColor1;
-//     box-shadow: 0px 0px 0px 5px $myColor1;
-//   }
-
-//   100% {
-//     background-color: #e0dd0f;
-//     box-shadow: 0px 0px 0px 5px #e0dd0f;
-//   }
-// }
-
 @keyframes ellipse {
   0% {
     box-shadow: 0px 0px 0px 40px $myColor1;

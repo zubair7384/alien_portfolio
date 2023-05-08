@@ -112,10 +112,12 @@ export default {
       cursorBig.style.backgroundColor = "#00ff29";
     });
     const positionElement = (e) => {
-      const mouseY = e.clientY + window.pageYOffset;
-      const mouseX = e.clientX + window.pageXOffset;
-      cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-      // cursorBig.style.transition = `transform 0.2s ease-in-out`;
+      const mouseY = e.clientY + +window?.pageYOffset;
+      const mouseX = e.clientX + window?.pageXOffset;
+      cursorBig.style.transform = `translate3d(${mouseX - 9}px, ${
+        mouseY - 9
+      }px, 0)`;
+      // console.log(window, "window");
     };
 
     window?.addEventListener("mousemove", positionElement);
