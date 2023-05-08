@@ -115,6 +115,7 @@ export default {
       const mouseY = e.clientY + window.pageYOffset;
       const mouseX = e.clientX + window.pageXOffset;
       cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+      // cursorBig.style.transition = `transform 0.2s ease-in-out`;
     };
 
     window?.addEventListener("mousemove", positionElement);

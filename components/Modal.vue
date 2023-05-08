@@ -36,6 +36,9 @@ body.modal-open {
   overflow: hidden;
 }
 .modal {
+  display: none;
+}
+.modal {
   position: absolute;
   top: 0;
   opacity: 0;
