@@ -94,11 +94,12 @@ body.modal-open {
         z-index: 2;
         top: 0;
         border-radius: 12px;
+        margin: 5%;
       }
       .modal-close {
         position: absolute;
-        right: 12px;
-        top: 12px;
+        right: 42px;
+        top: 42px;
         z-index: 3;
         display: flex;
         justify-content: center;
@@ -110,6 +111,14 @@ body.modal-open {
         color: #fff;
         font-size: 40px;
         cursor: none;
+        @media only screen and (max-width: 768px) {
+          right: 12px;
+          top: 32px;
+        }
+        @media only screen and (max-width: 380px) {
+          right: 5px;
+          top: 21px;
+        }
       }
     }
   }
