@@ -79,12 +79,15 @@ body.modal-open {
       justify-content: center;
       @media only screen and (max-width: 768px) {
         max-width: 400px !important;
+        min-height: 553px;
       }
       @media only screen and (max-width: 500px) {
         max-width: 350px !important;
+        min-height: 484px;
       }
       @media only screen and (max-width: 380px) {
         max-width: 300px !important;
+        min-height: 415px;
       }
 
       img {
