@@ -96,11 +96,17 @@ body.modal-open {
       img {
         position: relative;
         width: 100%;
-        height: max-content !important;
+        height: auto;
         z-index: 2;
         top: 0;
         border-radius: 12px;
         margin: 5%;
+        @media only screen and (max-width: 768px) {
+          height: 493px;
+        }
+        @media only screen and (max-width: 380px) {
+          height: 416px;
+        }
       }
       .modal-close {
         position: absolute;
@@ -118,8 +124,8 @@ body.modal-open {
         font-size: 40px;
         cursor: none;
         @media only screen and (max-width: 768px) {
-          right: 15px;
-          top: 35px;
+          right: 30px;
+          top: 30px;
         }
         @media only screen and (max-width: 380px) {
           right: 7px;
