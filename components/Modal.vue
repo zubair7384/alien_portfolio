@@ -90,7 +90,7 @@ body.modal-open {
       img {
         position: relative;
         width: 100%;
-        height: fit-content;
+        height: fit-content !important;
         z-index: 2;
         top: 0;
         border-radius: 12px;
