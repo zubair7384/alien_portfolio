@@ -74,20 +74,24 @@ body.modal-open {
       max-width: 700px !important;
       width: 700px;
       min-height: 820px;
+      height: 820px;
       position: relative;
       display: flex;
       justify-content: center;
       @media only screen and (max-width: 768px) {
         max-width: 400px !important;
         min-height: 553px;
+        height: 553px;
       }
       @media only screen and (max-width: 500px) {
         max-width: 350px !important;
         min-height: 484px;
+        height: 484px;
       }
       @media only screen and (max-width: 380px) {
         max-width: 300px !important;
         min-height: 415px;
+        height: 415px;
       }
 
       img {
