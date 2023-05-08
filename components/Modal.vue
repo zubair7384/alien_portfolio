@@ -71,33 +71,32 @@ body.modal-open {
     align-items: center;
     height: 100vh;
     .imageWrapper {
-      max-width: 700px !important;
-      width: 700px;
-      min-height: 820px;
-      height: 820px;
+      min-width: 600px;
+      width: 100%;
+      min-height: 890px;
+      height: auto;
       position: relative;
       display: flex;
       justify-content: center;
       @media only screen and (max-width: 768px) {
-        max-width: 400px !important;
-        min-height: 553px;
-        height: 553px;
+        width: 400px;
+        min-width: 400px;
+        min-height: 690px;
       }
       @media only screen and (max-width: 500px) {
-        max-width: 350px !important;
-        min-height: 484px;
-        height: 484px;
+        width: 380px;
+        min-width: 380px;
+        min-height: 690px;
       }
       @media only screen and (max-width: 380px) {
-        max-width: 300px !important;
-        min-height: 415px;
-        height: 415px;
+        width: 300px;
+        min-width: 300px;
+        min-height: 690px;
       }
-
       img {
         position: relative;
         width: 100%;
-        height: fit-content !important;
+        height: max-content !important;
         z-index: 2;
         top: 0;
         border-radius: 12px;
@@ -105,7 +104,7 @@ body.modal-open {
       }
       .modal-close {
         position: absolute;
-        right: 42px;
+        right: 12px;
         top: 42px;
         z-index: 3;
         display: flex;
@@ -119,11 +118,11 @@ body.modal-open {
         font-size: 40px;
         cursor: none;
         @media only screen and (max-width: 768px) {
-          right: 12px;
-          top: 32px;
+          right: 15px;
+          top: 35px;
         }
         @media only screen and (max-width: 380px) {
-          right: 5px;
+          right: 7px;
           top: 21px;
         }
       }
