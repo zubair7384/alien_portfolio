@@ -124,8 +124,8 @@ body.modal-open {
         font-size: 40px;
         cursor: none;
         @media only screen and (max-width: 768px) {
-          right: 30px;
-          top: 30px;
+          right: 20px;
+          top: 27px;
         }
         @media only screen and (max-width: 380px) {
           right: 7px;
