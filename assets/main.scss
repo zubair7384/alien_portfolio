@@ -18,7 +18,7 @@ body {
   padding: 0;
   font-family: "Figtree", sans-serif;
   background-color: #000;
-  cursor: none;
+  // cursor: none;
 }
 
 .mainContainer {
@@ -321,6 +321,7 @@ text set in the data-text attribute. */
 }
 
 .glitch {
+  cursor: pointer;
   position: relative;
   color: white;
   font-size: 4em;
@@ -499,24 +500,28 @@ skew to change the 'thickness' of the glitch.*/
   }
 }
 
-.big {
+
+
+
+
+.cursor {
   position: absolute;
-  z-index: 99999;
-  width: 20px;
-  height: 20px;
-  background-color: $myColor1;
+  z-index: 999999;
+  pointer-events: none;
+  will-change: transform;
+  mix-blend-mode: difference;
+.big {
+  width: 2.2222222222rem;
+  height: 2.2222222222rem;
+  margin-top: -50%;
+  margin-left: -50%;
   border-radius: 50%;
-  margin-bottom: 20rem;
-  animation-name: stretch;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  transition: transform 0.06s;
+  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: #00ff29;
   @media only screen and (max-width: 1024px) {
     display: none;
   }
+}
 }
 @keyframes ellipse {
   0% {

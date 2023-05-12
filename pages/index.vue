@@ -1,5 +1,7 @@
 <template>
-  <div class="big"></div>
+  <div class="cursor">
+    <div class="big"></div>
+  </div>
   <div class="mainContainer">
     <header class="headerWrapper">
       <h1 class="glitch headerTitle" data-text="ALIENS AMONG US">
@@ -96,28 +98,38 @@ export default {
     return {};
   },
   mounted() {
-    const cursorBig = document?.querySelector(".big");
-    const footer = document?.querySelector(".footerContainer");
-    const greenEllipse = document?.querySelector(".greenEllipse");
-    footer?.addEventListener("mouseover", () => {
-      cursorBig.style.backgroundColor = "#fff";
-    });
-    footer?.addEventListener("mouseleave", () => {
-      cursorBig.style.backgroundColor = "#00ff29";
-    });
-    greenEllipse?.addEventListener("mouseover", () => {
-      cursorBig.style.backgroundColor = "#fff";
-    });
-    greenEllipse?.addEventListener("mouseleave", () => {
-      cursorBig.style.backgroundColor = "#00ff29";
-    });
-    const positionElement = (e) => {
-      const mouseY = e.clientY + +window?.pageYOffset;
-      const mouseX = e.clientX + window?.pageXOffset;
-      cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-    };
+    const cursorBig = document?.querySelector(".cursor");
+    const big = document?.querySelector(".big");
+    const glitch = document?.querySelector(".glitch");
+    let currentX = 0
+    let currentY = 0
+    let aimX = 0
+    let aimY = 0
+    let speed = 0.2
 
+    const animate = function () {
+      currentX += (aimX - currentX) * speed
+      currentY += (aimY - currentY) * speed
+      cursorBig.style.left = currentX + "px"
+      cursorBig.style.top = currentY + "px"
+      requestAnimationFrame(animate)
+    }
+    animate()
+    const positionElement = (event) => {
+      aimX = event.pageX
+      aimY = event.pageY
+    };
     window?.addEventListener("mousemove", positionElement);
+    glitch?.addEventListener("mousemove", function(event) {
+      big.style.width = "4rem";
+      big.style.height = "4rem";
+      big.style.border = "solid 1px #00ff29";
+
+    });
+    glitch?.addEventListener("mouseleave", function(event) {
+    big.style.width = "2rem";
+    big.style.height = "2rem";
+  });
   },
   methods: {},
 };
